@@ -1,0 +1,25 @@
+.container {
+  min-height: 100vh;
+  background: var(--noir);
+  color: var(--bianco);
+}
+
+.main {
+  padding: var(--space-8);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  font-weight: 300;
+  margin-bottom: var(--space-6);
+}
+
+.description {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--grigio);
+  line-height: var(--leading-relaxed);
+}
