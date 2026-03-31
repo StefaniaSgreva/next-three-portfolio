@@ -2,16 +2,24 @@
 
 export default function HeroText() {
   return (
-    <>
-      <div className="hero-tag">Full Stack · AI Engineer · Roma</div>
+    <div className="hero-txt">
+      <div className="hero-tag">Full Stack Developer <div className="hero-line" style={{ backgroundColor: "var(--lilla)" }}></div> <span style={{ color: "var(--oro)" }}>AI Engineer</span>  <div className="hero-line" style={{ backgroundColor: "var(--oro)" }}></div> <span style={{ color: "var(--grigio)" }}>3D Specialist</span></div>
       <div className="hero-h1">
-        Every pixel.<br />Every line.<br /><em>Every detail.</em>
+        I build with logic.<br />I see with an <em>artist&apos;s eye.</em>
       </div>
       <div className="hero-sub">
-        From VFX pipelines to AI systems —<br />
-        <strong>the obsession with precision never changed.</strong>
+          10+ years as Senior 3D Artist · Full Stack Developer · AI Engineering <br/>
+          React · Vue · Laravel · LLM · RAG · AI Agents · Three.js
       </div>
-      <button className="cta">See the work</button>
-    </>
+      <div className="btn-row">
+        <button className="btn-primary">view my work</button>
+        <button className="btn-ghost">get in touch</button>
+      </div>
+
+      <div className="hero-scroll">
+        <div className="hero-line"></div>Scroll to explore
+      </div>
+
+    </div>
   );
 }

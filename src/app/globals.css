@@ -98,27 +98,6 @@ body {
   font-family: var(--font-sans);
 }
 
-.cta {
-  display: inline-block;
-  margin-top: var(--space-5);
-  font-size: var(--text-xs);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--noir);
-  background: var(--oro);
-  padding: 0.5625rem 1.375rem;
-  cursor: pointer;
-  position: relative;
-  z-index: var(--z-overlay);
-  transition: background 0.2s;
-  border: none;
-  font-family: var(--font-sans);
-
-  &:hover {
-    background: var(--oro-soft);
-  }
-}
-
 .divider-oro {
   height: 0.5px;
   background: var(--oro-dim);
@@ -127,6 +106,56 @@ body {
 .divider-lilla {
   height: 0.5px;
   background: var(--lilla-dim);
+}
+/* ========== BUTTONS ========== */
+.btn-row {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  flex-wrap: wrap;
+
+  .btn-primary,
+  .btn-ghost,
+  .btn-lilla {
+    font-size: var(--text-xs);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.5625rem 1.25rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: var(--font-sans);
+  }
+
+  .btn-primary {
+    background: var(--oro);
+    color: var(--noir);
+    border: none;
+
+    &:hover {
+      background: var(--oro-soft);
+    }
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--bianco);
+    border: 0.5px solid var(--grigio-soft);
+
+    &:hover {
+      border-color: var(--lilla);
+      color: var(--lilla-soft);
+    }
+  }
+
+  .btn-lilla {
+    background: transparent;
+    color: var(--lilla-soft);
+    border: 0.5px solid var(--lilla-dim);
+
+    &:hover {
+      background: var(--lilla-dim);
+    }
+  }
 }
 
 /**************************
@@ -168,7 +197,7 @@ body {
 
 .hero {
   position: relative;
-  height: 360px;
+  height: 400px;
   overflow: hidden;
 }
 
@@ -202,15 +231,32 @@ body {
   background: linear-gradient(to top, var(--noir) 0%, transparent 100%);
 }
 
-.hero-tag,
-.hero-h1,
-.hero-sub,
-.cta {
-  position: relative;
+.hero-txt{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: fit-content;
   z-index: 2;
+  padding: 0 var(--space-8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: radial-gradient(var(--noir) 0%, transparent 100%);
 }
 
+  .hero-line{
+    height: 1px;
+    width: 40px;
+    background-color: var(--grigio);
+  }
+
 .hero-tag {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
   font-size: var(--text-xs);
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -243,6 +289,18 @@ body {
 .hero-sub strong {
   color: var(--lilla);
   font-weight: 400;
+}
+
+.hero-scroll{
+  font-size: var(--text-xs);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--grigio);
+  margin-top: var(--space-8);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
 }
 
 /**************************
